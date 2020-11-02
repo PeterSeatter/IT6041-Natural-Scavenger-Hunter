@@ -4,21 +4,6 @@ using UnityEngine;
 
 public class HealthManager : MonoBehaviour
 {
-    private static HealthManager _instance;
-    public static HealthManager Instance { get { return _instance; } }
-
-    private void Awake()
-    {
-        if (_instance != null && _instance != this)
-        {
-            Destroy(this.gameObject);
-        }
-        else
-        {
-            _instance = this;
-        }
-    }
-
     public int MaxHealth;
     public int CurrentHealth;
     public float LastPositionY = 0f;
@@ -28,8 +13,7 @@ public class HealthManager : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
-        CurrentHealth = MaxHealth;
+    {        
         Controller = GetComponent<CharacterController>();
     }
 
@@ -41,6 +25,8 @@ public class HealthManager : MonoBehaviour
 
     private void FallDamageAmount()
     {
+        CurrentHealth = MaxHealth;
+
         if (LastPositionY > Player.transform.position.y)
         {
             FallDistance += LastPositionY - Player.transform.position.y;
@@ -48,14 +34,14 @@ public class HealthManager : MonoBehaviour
 
         LastPositionY = Player.transform.position.y;
 
-        if (FallDistance >= 5 && Controller.isGrounded)
+        if (FallDistance >= 3 && Controller.isGrounded)
         {
             CurrentHealth -= Mathf.RoundToInt(FallDistance);
             FallReset();
             //Debug.Log("You've hit the ground");
         }
 
-        if (FallDistance <= 5 && Controller.isGrounded)
+        if (FallDistance <= 3 && Controller.isGrounded)
         {
             FallReset();
         }
