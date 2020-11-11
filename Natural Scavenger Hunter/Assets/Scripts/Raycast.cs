@@ -8,6 +8,8 @@ public class Raycast : MonoBehaviour
 
     [SerializeField] private int RayLength = 10;
     [SerializeField] private LayerMask LayerMaskInteract;
+    public int Wood;
+    public int Bamboo;
 
     private void Update()
     {
@@ -25,6 +27,16 @@ public class Raycast : MonoBehaviour
                     Debug.Log("You've interacted with the object");
                     //removes the object from the world
                     //RaycastedObject.SetActive(false);
+                    if (GameObject.FindWithTag("Wood"))
+                    {
+                        FindObjectOfType<Collected>().AddWood(Wood);
+                    }
+
+                    if (GameObject.FindWithTag("Bamboo"))
+                    {
+                        FindObjectOfType<Collected>().AddBamboo(Bamboo);
+                    }
+
                 }
             }
         }
