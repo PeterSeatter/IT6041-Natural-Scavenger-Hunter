@@ -61,6 +61,7 @@
     <Compile Include="Assets\Scripts\HealthManager.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\SettingsMenu.cs" />
+    <Compile Include="Assets\Scripts\Raycast.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -628,6 +629,10 @@
       <Project>{ACF8C093-50A6-2C72-C1F0-295EBF1139B3}</Project>
       <Name>Unity.VSCode.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
+      <Project>{C9A0991F-B166-8B5D-8344-846AE1728F98}</Project>
+      <Name>Unity.TextMeshPro.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
       <Project>{5DEE33F8-DC1F-610F-9652-C991A4EC96DF}</Project>
       <Name>UnityEngine.UI</Name>
@@ -644,17 +649,13 @@
       <Project>{C8352A40-DDC3-3529-2C7F-7CDD73A3D49B}</Project>
       <Name>Unity.VisualStudio.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{25B0C54E-58E1-25DB-E65D-7B41B3BFB4EC}</Project>
-      <Name>UnityEditor.UI</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
-      <Project>{C9A0991F-B166-8B5D-8344-846AE1728F98}</Project>
-      <Name>Unity.TextMeshPro.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.csproj">
       <Project>{196584B5-CED5-8402-C01D-A7CAAC6556EB}</Project>
       <Name>Unity.TextMeshPro</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEditor.UI.csproj">
+      <Project>{25B0C54E-58E1-25DB-E65D-7B41B3BFB4EC}</Project>
+      <Name>UnityEditor.UI</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

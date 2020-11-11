@@ -82,6 +82,7 @@
     <Compile Include="Library\PackageCache\com.unity.textmeshpro@3.0.3\Scripts\Editor\TMP_MeshRendererEditor.cs" />
     <Compile Include="Library\PackageCache\com.unity.textmeshpro@3.0.3\Scripts\Editor\TMP_BitmapShaderGUI.cs" />
     <Compile Include="Library\PackageCache\com.unity.textmeshpro@3.0.3\Scripts\Editor\TMP_StyleSheetEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.textmeshpro@3.0.3\Scripts\Editor\TMP_PreBuildProcessor.cs" />
     <Compile Include="Library\PackageCache\com.unity.textmeshpro@3.0.3\Scripts\Editor\TMP_EditorPanelUI.cs" />
     <Compile Include="Library\PackageCache\com.unity.textmeshpro@3.0.3\Scripts\Editor\TMP_SettingsEditor.cs" />
     <Compile Include="Library\PackageCache\com.unity.textmeshpro@3.0.3\Scripts\Editor\DropdownOptionListDrawer.cs" />
@@ -102,7 +103,6 @@
     <Compile Include="Library\PackageCache\com.unity.textmeshpro@3.0.3\Scripts\Editor\TMPro_EditorShaderUtilities.cs" />
     <Compile Include="Library\PackageCache\com.unity.textmeshpro@3.0.3\Scripts\Editor\TMPro_CreateObjectMenu.cs" />
     <Compile Include="Library\PackageCache\com.unity.textmeshpro@3.0.3\Scripts\Editor\TMP_PostBuildProcessHandler.cs" />
-    <Compile Include="Library\PackageCache\com.unity.textmeshpro@3.0.3\Scripts\Editor\TMP_PreBuildProcessor.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.3\Scripts\Editor\Unity.TextMeshPro.Editor.asmdef" />
