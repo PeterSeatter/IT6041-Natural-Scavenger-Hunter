@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Raycast : MonoBehaviour
@@ -10,9 +11,11 @@ public class Raycast : MonoBehaviour
     [SerializeField] private LayerMask LayerMaskInteract;
     public int Wood;
     public int Bamboo;
+    //public TextMeshProUGUI InteractionText;
+    GameObject PopUp;
 
     private void Update()
-    {
+    {        
         RaycastHit Hit;
         Vector3 Forward = transform.TransformDirection(Vector3.forward);
 
@@ -20,6 +23,10 @@ public class Raycast : MonoBehaviour
         {
             if (Hit.collider.CompareTag("Object"))
             {
+                PopUp = GameObject.Find("Panel");
+                PopUp.SetActive(true);
+
+                //InteractionText.SetText("Press F to Interact");
                 RaycastedObject = Hit.collider.gameObject;
 
                 if (Input.GetKeyDown("f"))
@@ -36,9 +43,12 @@ public class Raycast : MonoBehaviour
                     {
                         FindObjectOfType<Collected>().AddBamboo(Bamboo);
                     }
-
                 }
             }
         }
     }
+    //public void InteractText()
+    //{
+    //    InteractionText.SetText("Press F to Interact");
+    //}
 }
