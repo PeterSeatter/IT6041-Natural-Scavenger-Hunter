@@ -12,10 +12,14 @@ public class Raycast : MonoBehaviour
     public int Wood;
     public int Bamboo;
     //public TextMeshProUGUI InteractionText;
-    GameObject PopUp;
 
     private void Update()
-    {        
+    {
+        Raycasting();
+    }
+
+    public void Raycasting()
+    {
         RaycastHit Hit;
         Vector3 Forward = transform.TransformDirection(Vector3.forward);
 
@@ -23,8 +27,13 @@ public class Raycast : MonoBehaviour
         {
             if (Hit.collider.CompareTag("Object"))
             {
-                PopUp = GameObject.Find("Panel");
-                PopUp.SetActive(true);
+                //GameObject.Find("Panel");
+                
+                if (GameObject.Find("Panel"))
+                {
+                    RaycastedObject.SetActive(true);
+                    Debug.Log("Panel Active");
+                }
 
                 //InteractionText.SetText("Press F to Interact");
                 RaycastedObject = Hit.collider.gameObject;
