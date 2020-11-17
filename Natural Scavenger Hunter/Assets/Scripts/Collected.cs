@@ -6,8 +6,8 @@ using UnityEngine;
 
 public class Collected : MonoBehaviour
 {
-    public int CurrentWood;
-    public int CurrentBamboo;
+    public static int CurrentWood;
+    public static int CurrentBamboo;
     public TextMeshProUGUI WoodText;
     public TextMeshProUGUI BambooText;
 

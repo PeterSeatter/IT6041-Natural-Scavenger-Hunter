@@ -123,7 +123,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2719697049673167043}
   m_Layer: 8
-  m_Name: GameObject
+  m_Name: Bamboo
   m_TagString: Bamboo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

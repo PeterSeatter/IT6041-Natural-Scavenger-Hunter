@@ -593,7 +593,7 @@ GameObject:
   - component: {fileID: 660273889}
   m_Layer: 8
   m_Name: Wood
-  m_TagString: Object
+  m_TagString: Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1360,6 +1360,8 @@ MonoBehaviour:
   SpawnPoint: {fileID: 763579977}
   Prefab: {fileID: -3433119727177566425, guid: 206f67124bed09b4da20b4de01336ebe, type: 3}
   AmountOfWood: 0
+  AmountOfBamboo: 0
+  AmountRequired: 0
 --- !u!65 &1744881764
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1551,8 +1553,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bf0cb2f5d8814e42be2af15a9d41ec1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentWood: 0
-  CurrentBamboo: 0
   WoodText: {fileID: 311678514}
   BambooText: {fileID: 665602557}
 --- !u!1 &1884572720
@@ -1735,6 +1735,14 @@ PrefabInstance:
     - target: {fileID: 2719697049485476582, guid: 206f67124bed09b4da20b4de01336ebe, type: 3}
       propertyPath: m_Name
       value: Bamboo
+      objectReference: {fileID: 0}
+    - target: {fileID: 2719697049485476582, guid: 206f67124bed09b4da20b4de01336ebe, type: 3}
+      propertyPath: m_TagString
+      value: Bamboo
+      objectReference: {fileID: 0}
+    - target: {fileID: 2719697049673167042, guid: 206f67124bed09b4da20b4de01336ebe, type: 3}
+      propertyPath: m_Name
+      value: GameObject
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 206f67124bed09b4da20b4de01336ebe, type: 3}

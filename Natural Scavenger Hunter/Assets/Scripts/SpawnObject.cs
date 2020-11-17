@@ -7,7 +7,9 @@ public class SpawnObject : MonoBehaviour
     public Transform SpawnPoint;
     public Rigidbody Prefab;
     //private readonly Collected wood;
-    public int AmountOfWood = 1;
+    public int AmountOfWood;
+    public int AmountOfBamboo;
+    public int AmountRequired = 5;
 
     private void Start()
     {
@@ -22,15 +24,28 @@ public class SpawnObject : MonoBehaviour
 
     public void AddCount(int prAddCount)
     {
-        FindObjectOfType<Collected>().AddWood(AmountOfWood);
-        AmountOfWood = prAddCount;
+        AmountOfWood = Collected.CurrentWood;
+        AmountOfBamboo = Collected.CurrentBamboo;
+        //FindObjectOfType<Collected>().AddWood(AmountOfWood);
+        //AmountOfWood += prAddCount;
         Rigidbody RigidPrefab;
         Debug.Log("Triggered");
         Debug.Log("Amount of: " + AmountOfWood);
-        if (AmountOfWood.Equals(5))
+        if (AmountOfWood.Equals(AmountRequired))
+        {
+            Debug.Log("Spawned item");
+            RigidPrefab = Instantiate(Prefab, SpawnPoint.position, SpawnPoint.rotation);            
+            if (Collected.CurrentWood <= 5)
+            {
+                Collected.CurrentWood = -AmountRequired;
+            }
+        }
+
+        if (AmountOfBamboo.Equals(AmountRequired))
         {
             Debug.Log("Spawned item");
             RigidPrefab = Instantiate(Prefab, SpawnPoint.position, SpawnPoint.rotation);
+            AmountOfBamboo =- AmountRequired;
         }
     }
 }
