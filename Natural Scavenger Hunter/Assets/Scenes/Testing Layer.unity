@@ -1014,6 +1014,7 @@ MonoBehaviour:
     m_Bits: 256
   Wood: 0
   Bamboo: 0
+  InteractionPrompt: {fileID: 1339040520}
 --- !u!1 &763579976
 GameObject:
   m_ObjectHideFlags: 0
