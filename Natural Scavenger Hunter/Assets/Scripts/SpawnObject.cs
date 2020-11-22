@@ -34,10 +34,10 @@ public class SpawnObject : MonoBehaviour
         if (AmountOfWood.Equals(AmountRequired))
         {
             Debug.Log("Spawned item");
-            RigidPrefab = Instantiate(Prefab, SpawnPoint.position, SpawnPoint.rotation);            
+            RigidPrefab = Instantiate(Prefab, SpawnPoint.position, SpawnPoint.rotation);
             if (Collected.CurrentWood <= 5)
             {
-                Collected.CurrentWood = -AmountRequired;
+                Collected.CurrentWood =- AmountRequired;
             }
         }
 
@@ -46,6 +46,14 @@ public class SpawnObject : MonoBehaviour
             Debug.Log("Spawned item");
             RigidPrefab = Instantiate(Prefab, SpawnPoint.position, SpawnPoint.rotation);
             AmountOfBamboo =- AmountRequired;
+        }
+
+        if (AmountOfBamboo.Equals(5) && AmountOfWood.Equals(5))
+        {
+            Debug.Log("Spawned item");
+            RigidPrefab = Instantiate(Prefab, SpawnPoint.position, SpawnPoint.rotation);
+            AmountOfBamboo =- AmountRequired;
+            Collected.CurrentWood = -AmountRequired;
         }
     }
 }
